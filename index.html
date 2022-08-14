@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/style.css">
-    <script defer src="/index.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.css" integrity="sha512-9nqhm3FWfB00id4NJpxK/wV1g9P2QfSsEPhSSpT+6qrESP6mpYbTfpC+Jvwe2XY27K5mLwwrqYuzqMGK5yC9/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -15,46 +14,60 @@
         <i class="fa-brands fa-autoprefixer"></i>
         <h1 class="header-title">Encrypt text challenge</h1>
         <div class="header-hashtag">
-            <p>#OracleNextEducation</p>
+            <p>#Oracle</p>
             <p>#AluraLatam</p>
         </div>
     </header>
     <main class="encrypt-section">
-        <article class="encrypt-box">
+        
+        <section class="encrypt-box">
             <div>
-                <textarea autofocus placeholder="Escribe aquí tu texto" class="text-box" name="" id="" cols="30" rows="10"></textarea>
+                <textarea autofocus placeholder="Escribe aquí tu texto" class="text-box" name="" id="textIn" cols="30" rows="10"></textarea>
             </div>
             <div>
-                <button class="button">
+                <button id="encryptButton" class="button">
                     Encriptar
                 </button>
-                <button class="button">
+                <button id="decryptButton" class="button">
                     Desencriptar
                 </button>
             </div>
-        </article>
+        </section>
 
         <i class="fa-solid fa-right-left"></i>
         
-        <article class="encrypt-box">
+        <section class="encrypt-box_visibility">
             <div>
-                <textarea placeholder="Texto encriptado / desencriptado" class="text-box" name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="text-box" name="" id="textOut" cols="30" rows="10"></textarea>
             </div>
-            <div>
-                <button class="button">
+            <div class="test">
+                <button id="copyButton" class="button">
                     Copiar
                 </button>
-        </article>
+            </div>
+        </section>
+
+        <div class="encrypt-image">
+            <img  src="/assets/img/encrypted.png" alt="encrypt image">
+        </div>
+        
     </main>
+
     <footer>
+
         <section>
             <div>
-                <p>Repositorio - <a href="https://github.com/rotgergabriel/Oracle-Alura-Latam-Challenge-1">https://github.com</a> </p>
-                
+                <a href="https://github.com/rotgergabriel/Oracle-Alura-Latam-Challenge-1">#ChallengeOne</a>
+                <p>&copy Todos los derechos reservados - 2022</p>
+                <p>Created by Rotger Gabriel Augusto</p>
             </div>
-            <p>&copy Todos los derechos reservados - 2022</p>
-            <p>Created by rotgergabriel@gmail.com</p>
+            <div class="footer-social">
+                <a href="https://github.com/rotgergabriel/"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriel-augusto-rotger/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </section>
+        
     </footer>
+    <script defer src="/js/index.js"></script>
 </body>
 </html>
