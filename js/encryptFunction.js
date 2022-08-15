@@ -1,16 +1,16 @@
 let encryptButton = document.getElementById('encryptButton')
 
-encryptButton.addEventListener('click', ()=> {
+encryptButton.addEventListener('click', () => {
 
         let textIn = document.getElementById('textIn')
+        let textValue = textIn.value
         let textOut = document.getElementById('textOut')
         let encryptBoxVisibility = document.getElementById('encryptBoxVisibility')
         let encryptImage = document.getElementById('encryptImage')
-        let textValue = textIn.value
 
         let text = []
-        let vowels = ['a', 'e', 'i', 'o', 'u']
-        let keys = ['ai', 'enter', 'imes', 'ober', 'ufat']
+        const vowels = ['a', 'e', 'i', 'o', 'u']
+        const keys = ['ai', 'enter', 'imes', 'ober', 'ufat']
 
         //Dividimos los string por caracteres y lo agregamos al array fomateado
         text = textValue.split('')
@@ -33,6 +33,21 @@ encryptButton.addEventListener('click', ()=> {
                     encryptText.push(item)
                 }
         })
+
+        //Con while y map() 
+        // let index = 0
+        // let count = 0
+        // while (count < text.length) {
+        //     text.map(item => {
+        //             if(item == vowels[index]){
+        //                 encryptText.push(item = keys[index])
+        //                 index++
+        //             }else {
+        //                 encryptText.push(item)
+        //             }
+        //             count++
+        //     })
+        // }
 
         const joinedText = encryptText.join('')
         encryptImage.style.visibility = 'hidden'
