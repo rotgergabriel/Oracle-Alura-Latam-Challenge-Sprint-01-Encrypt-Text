@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicons/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.css" integrity="sha512-9nqhm3FWfB00id4NJpxK/wV1g9P2QfSsEPhSSpT+6qrESP6mpYbTfpC+Jvwe2XY27K5mLwwrqYuzqMGK5yC9/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,7 +13,7 @@
 <body>
     <header class="header">
         <i class="fa-brands fa-autoprefixer"></i>
-        <h1 class="header-title">Encrypt text challenge</h1>
+        <h1 class="header-title">Encrypt - Challenge</h1>
         <div class="header-hashtag">
             <p>#Oracle</p>
             <p>#AluraLatam</p>
@@ -22,7 +23,7 @@
         
         <section class="encrypt-box">
             <div>
-                <textarea autofocus placeholder="Escribe aquí tu texto" class="text-box" name="" id="textIn" cols="30" rows="10"></textarea>
+                <textarea onkeypress="return (event.charCode == 241 || (event.charCode >= 97 && event.charCode <= 122))" autofocus placeholder="Escribe aquí tu texto" class="text-box" name="" id="textIn" cols="30" rows="10"></textarea>
             </div>
             <div>
                 <button id="encryptButton" class="button">
@@ -36,9 +37,9 @@
 
         <i class="fa-solid fa-right-left"></i>
         
-        <section class="encrypt-box_visibility">
+        <section id="encryptBoxVisibility" class="encrypt-box_visibility">
             <div>
-                <textarea class="text-box" name="" id="textOut" cols="30" rows="10"></textarea>
+                <textarea placeholder="Texto encriptado / desencriptado" class="text-box" name="" id="textOut" cols="30" rows="10"></textarea>
             </div>
             <div class="test">
                 <button id="copyButton" class="button">
@@ -47,7 +48,7 @@
             </div>
         </section>
 
-        <div class="encrypt-image">
+        <div id="encryptImage" class="encrypt-image">
             <img  src="/assets/img/encrypted.png" alt="encrypt image">
         </div>
         
@@ -68,6 +69,6 @@
         </section>
         
     </footer>
-    <script defer src="/js/index.js"></script>
+    <script defer src="/js/encryptButton.js"></script>
 </body>
 </html>

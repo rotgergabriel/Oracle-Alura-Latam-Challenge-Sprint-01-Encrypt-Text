@@ -49,6 +49,7 @@
     padding: 10px;
     border: 0;
     outline: none;
+    overflow: hidden;
 }
 
 .button {
@@ -66,7 +67,7 @@
 }
 
 #copyButton {
-    margin-left: 11px;
+    margin-left: 11.5px;
 }
 
 .button:hover {
@@ -157,6 +158,10 @@ footer a:visited {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .encrypt-box_visibility {
+        visibility: visible;
     }
 
     .text-box {
